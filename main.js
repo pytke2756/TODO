@@ -1,4 +1,5 @@
 let index = 0;
+
 function felvesz() {
     let inputData = document.getElementById("bevitel").value;
     let sor = document.createElement("li");
@@ -22,6 +23,9 @@ function felvesz() {
 
 function init() {
     document.getElementById("bevitel_gomb").addEventListener("click", felvesz);
+    document.getElementById("todo_data").addEventListener('click', function(e) {
+        this.removeChild(e.target);
+      })
 }
 
 document.addEventListener("DOMContentLoaded", init);
